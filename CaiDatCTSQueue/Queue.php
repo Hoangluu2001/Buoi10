@@ -1,4 +1,5 @@
 <?php
+include_once ('Node.php');
 class Queue {
     public $font ;
     public $back ;
@@ -8,7 +9,7 @@ class Queue {
     }
     public function enqueue($value){
         $oldBack = $this->back;
-        $this->back = new Element();
+        $this->back = new Node();
         $this->back->value = $value;
         if($this->isEmpty()){
             $this->font = $this->back;
@@ -30,9 +31,24 @@ $queue = new Queue();
 $queue->enqueue("Start");
 $queue->enqueue("1");
 $queue->enqueue("2");
+
+
+echo $queue->dequeue().'<br>';
+echo $queue->dequeue().'<br>';
+var_dump($queue->isEmpty());
+
 $queue->enqueue("3");
 $queue->enqueue("4");
-$queue->enqueue("End");
+
+echo $queue->dequeue().'<br>';
+echo $queue->dequeue().'<br>';
+echo $queue->dequeue().'<br>';
+
+
+
+
 while (!$queue->isEmpty()){
-    echo $queue->dequeue().'\n';
+    echo $queue->dequeue().'<br>';
+
 }
+var_dump($queue->isEmpty());
