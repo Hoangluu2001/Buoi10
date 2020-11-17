@@ -41,11 +41,11 @@ class Stack
 
 $myBooks = new Stack(10);
 
-$myBooks->push('A Dream of Spring');
-$myBooks->push('The Winds of Winter');
-$myBooks->push('A Dance with Dragons');
-$myBooks->push('A Feast for Crows');
-$myBooks->push('A Storm of Swords');
+$myBooks->push('Hoang');
+$myBooks->push('The ');
+$myBooks->push('Luu');
+$myBooks->push('21');
+$myBooks->push('07');
 
 
 
@@ -54,13 +54,13 @@ echo $myBooks->pop()."<br>";
 echo $myBooks->pop()."<br>";
 
 
-$myBooks->push('A Clash of Kings');
-$myBooks->push('A Game of Thrones');
-echo $myBooks->isEmpty()."<br>";
+$myBooks->push('2001');
+$myBooks->push('100');
+var_dump($myBooks->isEmpty());
 
 echo $myBooks->pop()."<br>";
 echo $myBooks->pop()."<br>";
 echo $myBooks->pop()."<br>";
 echo $myBooks->pop()."<br>";
 
-echo $myBooks->isEmpty()."<br>";
+var_dump($myBooks->isEmpty());
